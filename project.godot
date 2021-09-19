@@ -1,0 +1,110 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Reference",
+"class": "BitField",
+"language": "GDScript",
+"path": "res://addons/discord_gd/classes/bit_field.gd"
+}, {
+"base": "HTTPRequest",
+"class": "DiscordBot",
+"language": "GDScript",
+"path": "res://addons/discord_gd/discord.gd"
+}, {
+"base": "Reference",
+"class": "DiscordInteraction",
+"language": "GDScript",
+"path": "res://addons/discord_gd/classes/discord_interaction.gd"
+}, {
+"base": "Reference",
+"class": "Embed",
+"language": "GDScript",
+"path": "res://addons/discord_gd/classes/embed.gd"
+}, {
+"base": "Reference",
+"class": "Helpers",
+"language": "GDScript",
+"path": "res://addons/discord_gd/classes/helpers.gd"
+}, {
+"base": "Reference",
+"class": "Message",
+"language": "GDScript",
+"path": "res://addons/discord_gd/classes/message.gd"
+}, {
+"base": "Reference",
+"class": "MessageActionRow",
+"language": "GDScript",
+"path": "res://addons/discord_gd/classes/message_action_row.gd"
+}, {
+"base": "Reference",
+"class": "MessageButton",
+"language": "GDScript",
+"path": "res://addons/discord_gd/classes/message_button.gd"
+}, {
+"base": "Reference",
+"class": "MessageFlags",
+"language": "GDScript",
+"path": "res://addons/discord_gd/classes/message_flags.gd"
+}, {
+"base": "Reference",
+"class": "Permissions",
+"language": "GDScript",
+"path": "res://addons/discord_gd/classes/permissions.gd"
+}, {
+"base": "Reference",
+"class": "User",
+"language": "GDScript",
+"path": "res://addons/discord_gd/classes/user.gd"
+} ]
+_global_script_class_icons={
+"BitField": "",
+"DiscordBot": "",
+"DiscordInteraction": "",
+"Embed": "",
+"Helpers": "",
+"Message": "",
+"MessageActionRow": "",
+"MessageButton": "",
+"MessageFlags": "",
+"Permissions": "",
+"User": ""
+}
+
+[application]
+
+config/name="Discord Bot"
+run/main_scene="res://Bot.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+Globals="*res://globals.gd"
+ErrorHandler="*res://error_handler.gd"
+
+[debug]
+
+gdscript/completion/autocomplete_setters_and_getters=true
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/discord_gd/plugin.cfg" )
+
+[gui]
+
+timers/tooltip_delay_sec=0.0
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
